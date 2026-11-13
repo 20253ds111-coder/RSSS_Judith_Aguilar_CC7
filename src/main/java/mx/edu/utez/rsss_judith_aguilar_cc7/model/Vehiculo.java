@@ -18,16 +18,16 @@ public class Vehiculo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, unique = true, length = 20)
+    @Column(nullable = false, unique = true)
     private String placa;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false)
     private String marca;
 
-    @Column(nullable = false, length = 50)
+    @Column(nullable = false)
     private String modelo;
 
-    @Column(nullable = false, length = 100)
+    @Column(nullable = false)
     private String propietario;
 
     @Column(nullable = false)

@@ -20,18 +20,17 @@ public class OrdenServicio {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(nullable = false, length = 500)
+    @Column(nullable = false)
     private String descripcion;
 
-    @Column(nullable = false, precision = 12, scale = 2)
-    private BigDecimal costo = BigDecimal.ZERO;
+    private BigDecimal costo;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false)
     private TipoServicio tipo;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false, length = 20)
+    @Column(nullable = false)
     private EstadoOrden estado;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
