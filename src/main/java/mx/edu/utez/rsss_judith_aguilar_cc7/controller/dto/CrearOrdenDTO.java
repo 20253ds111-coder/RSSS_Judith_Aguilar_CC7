@@ -26,10 +26,4 @@ public class CrearOrdenDTO {
     @NotNull(message = "El tipo de servicio es obligatorio")
     private TipoServicio tipo;
 
-    public Long getIdVehiculo() { return idVehiculo; }
-    public void setIdVehiculo(Long idVehiculo) { this.idVehiculo = idVehiculo; }
-    public String getDescripcion() { return descripcion; }
-    public void setDescripcion(String descripcion) { this.descripcion = descripcion; }
-    public TipoServicio getTipo() { return tipo; }
-    public void setTipo(TipoServicio tipo) { this.tipo = tipo; }
 }

@@ -17,6 +17,5 @@ public class ActualizarCostoDTO {
     @DecimalMin(value = "0.00", message = "El costo debe ser mayor o igual a cero")
     private BigDecimal costo;
 
-    public BigDecimal getCosto() { return costo; }
-    public void setCosto(BigDecimal costo) { this.costo = costo; }
+
 }
