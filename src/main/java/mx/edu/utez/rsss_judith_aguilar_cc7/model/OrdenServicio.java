@@ -1,11 +1,19 @@
 package mx.edu.utez.rsss_judith_aguilar_cc7.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 
 @Entity
 @Table(name = "ordenes_servicio")
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class OrdenServicio {
 
     @Id
@@ -30,51 +38,4 @@ public class OrdenServicio {
     @JoinColumn(name = "vehiculo_id", nullable = false)
     private Vehiculo vehiculo;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getDescripcion() {
-        return descripcion;
-    }
-
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
-    }
-
-    public BigDecimal getCosto() {
-        return costo;
-    }
-
-    public void setCosto(BigDecimal costo) {
-        this.costo = costo;
-    }
-
-    public TipoServicio getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(TipoServicio tipo) {
-        this.tipo = tipo;
-    }
-
-    public EstadoOrden getEstado() {
-        return estado;
-    }
-
-    public void setEstado(EstadoOrden estado) {
-        this.estado = estado;
-    }
-
-    public Vehiculo getVehiculo() {
-        return vehiculo;
-    }
-
-    public void setVehiculo(Vehiculo vehiculo) {
-        this.vehiculo = vehiculo;
-    }
 }

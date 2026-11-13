@@ -1,12 +1,18 @@
 package mx.edu.utez.rsss_judith_aguilar_cc7.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
 @Entity
 @Table
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Vehiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,51 +33,4 @@ public class Vehiculo {
     @Column(nullable = false)
     private boolean activo = true;
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getPlaca() {
-        return placa;
-    }
-
-    public void setPlaca(String placa) {
-        this.placa = placa;
-    }
-
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getModelo() {
-        return modelo;
-    }
-
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
-    }
-
-    public String getPropietario() {
-        return propietario;
-    }
-
-    public void setPropietario(String propietario) {
-        this.propietario = propietario;
-    }
-
-    public boolean isActivo() {
-        return activo;
-    }
-
-    public void setActivo(boolean activo) {
-        this.activo = activo;
-    }
 }
